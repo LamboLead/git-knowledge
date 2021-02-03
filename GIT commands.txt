@@ -20,8 +20,10 @@ git commit [option] "[commit_message]": Saves all the changes in the staging are
     --amend: Allows to modify the last commit and opens the text editor to change the previously specified commit message.
 
 git diff : Compares changes commited.
-git stash : Shelves changes you've made to your working directory, so you can come back later and re-apply them.
+git stash : Shelves changes you've made to your working directory, so you can come back later and re-apply them. It takes uncommited both staged and unstaged changes and saves them away for further use. You can return them for further use.
 
+    pop: Removes the changes from the stash and re-applies them to the working copy.
+    apply: Re-applies the changes and keeps them in the stash.
 .gitignore: Is the name of a file in which you include the names of the files you don't want to commit.
 
 git status
