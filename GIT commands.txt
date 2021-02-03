@@ -46,17 +46,25 @@ git stash [optional_parameter/option]: Shelves changes you've made to your worki
 [option]s
     --include-untracked: Stashes the untracked files.
 
-.gitignore: Is the name of a file in which you include the names of the files you don't want to commit.
+.gitignore: Is the name of a file in which you include the names of the files you don't want to commit. (more here: https://www.w3docs.com/learn-git/gitignore.html)
 
 [Pattern]s
     **/logs: Matches any directory with name "logs"
-    **/logs/debug.log:
-    *.log
+    **/logs/debug.log: Matches any files "debug.log" with parent folder "logs".
+    *.log: Refers to every file with ".log" at the end
     *.log !important.log
     *.log !important/*.log trace.*
-    /debug.log
+    /debug.log: Matches "debug.log" files only in the repository root.
     debug.log: By default, matches files in any directory.
-
+    debug?.log
+    debug[0-9].log: Matches any file named "debug[number].log", [number] being the range from 0 to 9.
+    debug[01].log: Matches "debug0.log" or "debug1.log".
+    debug[!01].log: Matches any character except one from the particular set.
+    debug[a-z].log: Matches a single character from an alphabetic or numeric range
+    logs: The pattern will match anything named "logs" (directories and files) if slash is not used.
+    logs/: Slash points that the pattern is a directory named "logs".
+    logs/**/debug.log: Matches zero or more directories.
+    logs/*day/debug.log: ...
 
 git status
 
