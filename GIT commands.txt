@@ -19,7 +19,16 @@ git commit [option] "[commit_message]": Saves all the changes in the staging are
     -am: Combines a and m options.
     --amend: Allows to modify the last commit and opens the text editor to change the previously specified commit message.
 
-git diff : Compares changes commited.
+git diff [option/branch_comparison]: Compares changes commited. You can take two input data sets and output the modifications between them
+
+[option]s
+    --color-words: Highlights the words changed before and after the commit by changing their colour.
+
+[branch_comparison]s: Compares two branches
+    branch1..branch2: The different input is the tips of both branches.
+    branch1...branch2: Changes the first input parameter (branch1) initiating the diff.
+    branch1 branch2 "file_name": Compares a file between two branches.
+
 git stash [optional_parameter/option]: Shelves changes you've made to your working directory, so you can come back later and re-apply them. It takes uncommited both staged and unstaged changes and saves them away for further use. You can return them for further use.
 
 [optional_parameter]s
@@ -33,7 +42,10 @@ git stash [optional_parameter/option]: Shelves changes you've made to your worki
     show: Shows a summary of a stash.
     show -p: Shows the full diff of a stash.
     branch [branch_name] stash@{[stash_number]}: Creates a new branch from stashed changes
+
+[option]s
     --include-untracked: Stashes the untracked files.
+
 .gitignore: Is the name of a file in which you include the names of the files you don't want to commit.
 
 git status
