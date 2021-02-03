@@ -1,3 +1,11 @@
+--- GENERAL COMMANDS ---
+
+cd [path]: Changes path to specified
+
+echo "[file_content]" >> [file_name]: Creates a new file or writes into it.
+
+--- SETTING UP A REPOSITORY ---
+
 git init <flag>: Creates a new repository
 
 <flags>
@@ -5,6 +13,46 @@ git init <flag>: Creates a new repository
     --template=[template_directory]: specifies from which templates the directory must be used.
     --separate-git-dir=[git_directory]: Creates a text file which contains the path to git_directory.
     --shared=[]: Specifies that the repository will be shared among several users, allowing them to push/pull to it.
+
+git clone <flag> [repository_url]: Clones an existing repository, usually located online.
+
+<flags>
+    -branch: Specifies which branch to clone instead of the one the HEAD pointer is indicating to (usually the mastar branch).
+    --bare: Creates a copy of the remote repository, excluding the working directory (push/pull only).
+    --mirror: Clones all the extended references of the remote repository, maintaining a remote branch tracking configuration.
+
+[repository_url]s
+    git
+    ssh
+    HTTPS
+    local
+
+git config <flag> <subject>.<characteristic> [value]
+
+<flags>
+    --global: Current user
+    --local: Current local repository
+    --system: System, all users and repositories on a machine
+
+<subject>
+    user
+    core
+    alias
+
+<characteristic>
+    name
+    email
+    editor
+    
+git alias (direct command doesn't exists. You can create them with git config)
+
+    # Creates the alias 'c' for commit 
+    git config --global alias.c commit 
+
+    # Lists all the alias
+    git config --list
+
+--- SAVING CHANGES ---
 
 git add [file_name/option]: Update the changes made to a file into the staging area of the repository.
 
@@ -18,16 +66,6 @@ git commit [option] "[commit_message]": Saves all the changes in the staging are
     -m: Creates a commit and opwns the locally configured text editor to enter a commit message.
     -am: Combines a and m options.
     --amend: Allows to modify the last commit and opens the text editor to change the previously specified commit message.
-
-git diff [option/branch_comparison]: Compares changes commited. You can take two input data sets and output the modifications between them
-
-[option]s
-    --color-words: Highlights the words changed before and after the commit by changing their colour.
-
-[branch_comparison]s: Compares two branches
-    branch1..branch2: The different input is the tips of both branches.
-    branch1...branch2: Changes the first input parameter (branch1) initiating the diff.
-    branch1 branch2 "file_name": Compares a file between two branches.
 
 git stash [optional_parameter/option]: Shelves changes you've made to your working directory, so you can come back later and re-apply them. It takes uncommited both staged and unstaged changes and saves them away for further use. You can return them for further use.
 
@@ -45,6 +83,16 @@ git stash [optional_parameter/option]: Shelves changes you've made to your worki
 
 [option]s
     --include-untracked: Stashes the untracked files.
+
+git diff [option/branch_comparison]: Compares changes commited. You can take two input data sets and output the modifications between them
+
+[option]s
+    --color-words: Highlights the words changed before and after the commit by changing their colour.
+
+[branch_comparison]s: Compares two branches
+    branch1..branch2: The different input is the tips of both branches.
+    branch1...branch2: Changes the first input parameter (branch1) initiating the diff.
+    branch1 branch2 "file_name": Compares a file between two branches.
 
 .gitignore: Is the name of a file in which you include the names of the files you don't want to commit. (more here: https://www.w3docs.com/learn-git/gitignore.html)
 
@@ -68,57 +116,19 @@ git stash [optional_parameter/option]: Shelves changes you've made to your worki
 
 git status
 
-cd [path]
-
-echo "[file_content]" >> [file_name]
 
 
 
 
 
 
-git clone <flag> [repository_url]: Clones an existing repository, usually located online.
-
-<flags>
-    -branch: Specifies which branch to clone instead of the one the HEAD pointer is indicating to (usually the mastar branch).
-    --bare: Creates a copy of the remote repository, excluding the working directory (push/pull only).
-    --mirror: Clones all the extended references of the remote repository, maintaining a remote branch tracking configuration.
-
-[repository_url]s
-    git
-    ssh
-    HTTPS
-    local
 
 
-    git push
 
-    git remote add [remote_name] [remote_repository_url]
+git push
+
+git remote add [remote_name] [remote_repository_url]
 
     git push
 
 
-git config <flag> <subject>.<characteristic> [value]
-
-<flags>
-    --global: Current user
-    --local: Current local repository
-    --system: System, all users and repositories on a machine
-
-<subject>
-    user
-    core
-    alias
-
-<characteristic>
-    name
-    email
-    editor
-
-git alias (direct command doesn't exists. You can create them with git config)
-
-    # Creates the alias 'c' for commit 
-    git config --global alias.c commit 
-
-    # Lists all the alias
-    git config --list
