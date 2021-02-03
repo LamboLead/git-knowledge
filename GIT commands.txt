@@ -24,6 +24,8 @@ git stash : Shelves changes you've made to your working directory, so you can co
 
     pop: Removes the changes from the stash and re-applies them to the working copy.
     apply: Re-applies the changes and keeps them in the stash.
+    pop stash@{3}: Stashes the fourth stashed changes on the list.
+
 .gitignore: Is the name of a file in which you include the names of the files you don't want to commit.
 
 git status
