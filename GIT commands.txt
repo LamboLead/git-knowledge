@@ -48,6 +48,16 @@ git stash [optional_parameter/option]: Shelves changes you've made to your worki
 
 .gitignore: Is the name of a file in which you include the names of the files you don't want to commit.
 
+[Pattern]s
+    **/logs: Matches any directory with name "logs"
+    **/logs/debug.log:
+    *.log
+    *.log !important.log
+    *.log !important/*.log trace.*
+    /debug.log
+    debug.log: By default, matches files in any directory.
+
+
 git status
 
 cd [path]
