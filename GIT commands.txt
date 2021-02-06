@@ -114,9 +114,43 @@ git diff [option/branch_comparison]: Compares changes commited. You can take two
     logs/**/debug.log: Matches zero or more directories.
     logs/*day/debug.log: ...
 
-git status
+--- EXAMINING A REPOSITORY ---
 
+git status [option]: It shows the state of the working directory and the staging area.
 
+[option]s
+    -s: Outputs the short format
+    -b: Displays the branch and tracking information in the short format.
+    --porcelain: Outputs in a easy-to-parse format for scripts.
+    --long: Default. Outputs in the long format.
+    -u[mode]: Displays the untracked files.
+        no: Displays no untracked files.
+        normal: Displays untracked files and directories.
+        all: Displays individual files in untracked directories.
+    --ignore[when]: Ignores changes to submodules when looking for changes.
+        "none"
+        "untracked"
+        "dirty"
+        "all"
+    -z: Terminates entries with NUL
+    --column: Displays untracked files in columns
+
+git log [option]: Shows commited snapshots. It is used for listing and filtering the project history, and searching for particular changes.
+
+[option]s
+    -n[number]: Limits the number of commits to the specified number.
+    --oneline: Fits each commit on a single line.
+    --stat: Includes changed files and the number of added or deleted lines from them.
+    -p: shows the patch for each commit and their full diff.
+    --author=<"pattern">: Searches for commits by a specified author.
+    --grep=<"pattern">: Searches for commits with a commit message.
+    <since>..<until>: Displays commits that occur between <since> and <until> arguments. They can be a commit ID, a branch name, HEAD, or other kind of revision reference.
+    <"file">: Displays commits that include the specified file.
+    --graph --decorate --oneline: Draws a text-based graph of the commits | Adds the names of branches or tags of the displayed commits | Displays the commit info on a single line.
+
+git tag
+
+git blame
 
 
 
