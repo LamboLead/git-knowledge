@@ -142,18 +142,41 @@ git log [option]: Shows commited snapshots. It is used for listing and filtering
     --oneline: Fits each commit on a single line.
     --stat: Includes changed files and the number of added or deleted lines from them.
     -p: shows the patch for each commit and their full diff.
+    -S "string": Displays all the initial commits with a particular added or changed code on the string argument.
     --author=<"pattern">: Searches for commits by a specified author.
     --grep=<"pattern">: Searches for commits with a commit message.
     <since>..<until>: Displays commits that occur between <since> and <until> arguments. They can be a commit ID, a branch name, HEAD, or other kind of revision reference.
     <"file">: Displays commits that include the specified file.
     --graph --decorate --oneline: Draws a text-based graph of the commits | Adds the names of branches or tags of the displayed commits | Displays the commit info on a single line.
 
-git tag
+git tag [option] "[tag_name]" [ID_of_commit]: A tag is a reference point in a Git history marking version release. This command creates a tag on the commit mentioned by HEAD by default.
+[option]s
+    -a: Creates an annotated tag. It can include some metadata like tagger name, email, date, and tagging message.
+    -lw: Creates a lightweight tag with no metadata.
+    <no option>: Shows a list of all the tags.
+    -l <"pattern">: Shows a list of tags that match the pattern.
+    -a -f: Forces the renaming of old tags when inserting a tagged ID_of_commit and changing the tag_name.
+    -d: Deletes the tag identified by tag_name.
 
-git blame
 
+git blame [option] "[file_name]": Displays the author metadata attached to a particular commited line in a file. It is used to explore the file history.
 
+[option]s
+    -L 1,3: Limits the output to the requested line range
+    -e: Displays the author's email address instead of username.
+    -w: Ignores whitespace changes.
+    -M: Detects moved or copied lines within the same file, reporting their original author instead of the one who copied them.
+    -C: Detects lines that were moved or copied from other files, reporting their original author.
 
+--- UNDOING CHANGES ---
+
+git clean
+
+git revert
+
+git requested
+
+git rm
 
 
 
