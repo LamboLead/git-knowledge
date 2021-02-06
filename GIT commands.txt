@@ -143,6 +143,7 @@ git log [option]: Shows commited snapshots. It is used for listing and filtering
     --stat: Includes changed files and the number of added or deleted lines from them.
     -p: shows the patch for each commit and their full diff.
     -S "string": Displays all the initial commits with a particular added or changed code on the string argument.
+    --brances=*: Displays all the commits accross all the branches.
     --author=<"pattern">: Searches for commits by a specified author.
     --grep=<"pattern">: Searches for commits with a commit message.
     <since>..<until>: Displays commits that occur between <since> and <until> arguments. They can be a commit ID, a branch name, HEAD, or other kind of revision reference.
@@ -153,7 +154,7 @@ git tag [option] "[tag_name]" [ID_of_commit]: A tag is a reference point in a Gi
 [option]s
     -a: Creates an annotated tag. It can include some metadata like tagger name, email, date, and tagging message.
     -lw: Creates a lightweight tag with no metadata.
-    <no option>: Shows a list of all the tags.
+    NONE: Shows a list of all the tags.
     -l <"pattern">: Shows a list of tags that match the pattern.
     -a -f: Forces the renaming of old tags when inserting a tagged ID_of_commit and changing the tag_name.
     -d: Deletes the tag identified by tag_name.
@@ -172,13 +173,26 @@ git blame [option] "[file_name]": Displays the author metadata attached to a par
 
 git clean
 
-git revert
+git reset [] [ID_of_commit]: 
+[option]s
+    --hard: The commit history will be reset to the stated commit.
+
+git revert []: Creates a new commit reversing the last made commit, leaving the reversed commit on the history.
+
 
 git requested
 
 git rm
 
+---  ---
 
+git checkout [selector]
+
+[selector]s
+
+    NONE: Checkouts the previous to the last commit, putting the repository in a "detached" state. In this state, every new commit you make will be disposed by Git. To avoid this, make sure you're on a branch.
+    <ID_of_commit>: Displays the commit identified with the ID
+    <branch_name>: Navigates to the specified branch to continue development there.
 
 
 

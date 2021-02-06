@@ -1,0 +1,14 @@
+--- UNDOING CHANGES ---
+
+Undoing the last commit: The working directory is reverted to the last commit, reverted changes are staged, and Git will open text editor to modify the last commited message
+    git commit --amend
+
+Undoing uncommited changes: Undoes changes on the staging area and the working directory
+    git reset
+
+
+--- REVIEWING CODE ---
+
+Reviewing old commits
+    git log
+
