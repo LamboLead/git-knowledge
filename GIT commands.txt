@@ -199,10 +199,12 @@ git reset [option] [reference]: Command that allows to undo changes once they ar
     --mixed: The commit history will be reset to the stated commit, and the staging area will be reset to the stated commit. Undone changes from the staging area will be placed in the working directory.
     --soft: The commit history will be reset to the stated commit, but it doesn't affect the staging index and the working directory.
     --hard: The commit history will be reset to the stated commit, and any work done down the commit history will be lost.
+    none: Resets the staging area to correspond with the last commit, but leave the working directory unchanged.
 
 [reference]s
     HEAD (default)
-    ID of commit
+    [no_option] ID of commit: Resets the staging area to match the commit's, but not touching the working directory.
+    [no_option] <file>: Removes the specified file from the staging area without changing the working directory
 
 
 git requested
