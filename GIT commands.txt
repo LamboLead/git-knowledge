@@ -185,7 +185,7 @@ git clean [option]: Is an undo command to eliminate untracked files and director
 git revert [option] [reference]: Creates a new commit reversing the last commit made, leaving it in the history. This command can be used for automatically go back and make fixes.
 
 [option]s
-    -e: Opens the configured system editor and prompts you to edit the commit message before committing the revert.
+    -e: Opens the configured system editor and prompts you to edit the commit message before committing the revert. Default.
     --no-edit: It doesn't open the text editor.
     -n: Adds the inverse modifications to the staging area and working directory instead of creating a new commit.
 
