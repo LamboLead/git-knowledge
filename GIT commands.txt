@@ -171,13 +171,33 @@ git blame [option] "[file_name]": Displays the author metadata attached to a par
 
 --- UNDOING CHANGES ---
 
-git clean
+git clean [option]: Is an undo command to eliminate untracked files and directories, running in untracked files only.
+
+[option]s
+    -n: Shows the files that are going to be deleted, but doesn't remove them.
+    -f <path>: Deletes untracked files from the current directory, excepting the ones inside .gitignore. <path> can be introduced to specify which file to delete.
+    -x: Deletes untracked files, even the ones inside .gitignore.
+    -dn: Shows the directories that are going to be removed
+    -df: Deletes untracked directories.
+    -dx: Deletes untracked directories, even the ones inside .gitignore.
+    -i: Activates interactive mode with numerical commands.
+
+git revert [option] [reference]: Creates a new commit reversing the last commit made, leaving it in the history. This command can be used for automatically go back and make fixes.
+
+[option]s
+    -e: Opens the configured system editor and prompts you to edit the commit message before committing the revert.
+    --no-edit: It doesn't open the text editor.
+    -n: Adds the inverse modifications to the staging area and working directory instead of creating a new commit.
+
+[reference]s
+    HEAD: Reverts the last commit
+    # branch name
+    # ID of commit
 
 git reset [] [ID_of_commit]: 
 [option]s
     --hard: The commit history will be reset to the stated commit.
 
-git revert []: Creates a new commit reversing the last made commit, leaving the reversed commit on the history.
 
 
 git requested
