@@ -194,10 +194,15 @@ git revert [option] [reference]: Creates a new commit reversing the last commit 
     # branch name
     # ID of commit
 
-git reset [] [ID_of_commit]: 
+git reset [option] [reference]: Command that allows to undo changes once they are made through the three trees (working directory, staging area, and commit history). It moves both HEAD and the branch references to the defined commit, changing the state of the three trees.
 [option]s
-    --hard: The commit history will be reset to the stated commit.
+    --mixed:
+    --soft:
+    --hard: The commit history will be reset to the stated commit, and any work done down the commit history will be lost.
 
+[reference]s
+    HEAD (default)
+    ID of commit
 
 
 git requested
@@ -206,11 +211,11 @@ git rm
 
 ---  ---
 
-git checkout [selector]
+git checkout [selector]: Moves the HEAD pointer to the specified commit, resulting in the repository's status "detached". In this status, every new commit will be disposed by Git unless the HEAD is reunited with its branch.
 
 [selector]s
 
-    NONE: Checkouts the previous to the last commit, putting the repository in a "detached" state. In this state, every new commit you make will be disposed by Git. To avoid this, make sure you're on a branch.
+    NONE: Checkouts the previous to the last commit.
     <ID_of_commit>: Displays the commit identified with the ID
     <branch_name>: Navigates to the specified branch to continue development there.
 
