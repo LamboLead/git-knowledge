@@ -196,8 +196,8 @@ git revert [option] [reference]: Creates a new commit reversing the last commit 
 
 git reset [option] [reference]: Command that allows to undo changes once they are made through the three trees (working directory, staging area, and commit history). It moves both HEAD and the branch references to the defined commit, changing the state of the three trees.
 [option]s
-    --mixed:
-    --soft:
+    --mixed: The commit history will be reset to the stated commit, and the staging area will be reset to the stated commit. Undone changes from the staging area will be placed in the working directory.
+    --soft: Updates the pointers but it doesn't affect the staging index and the working directory.
     --hard: The commit history will be reset to the stated commit, and any work done down the commit history will be lost.
 
 [reference]s
