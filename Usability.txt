@@ -6,6 +6,7 @@ Undoing the last commit: The working directory is reverted to the last commit, r
 Undoing uncommited changes: Undoes changes on the staging area and the working directory
     git reset
 
+Do not use git reset on a public repository because other developers may rely on the commit you deleted with this command. Instead, use git revert.
 
 --- REVIEWING CODE ---
 
