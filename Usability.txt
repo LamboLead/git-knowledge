@@ -12,6 +12,8 @@ Undoing git rm: Reverts the current staging area and working directory back to t
     git reset HEAD
     git checkout .
 
+Do not use git commit --amend in public repositories.
+
 --- REVIEWING CODE ---
 
 Reviewing old commits

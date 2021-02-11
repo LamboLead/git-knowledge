@@ -222,7 +222,24 @@ git commit --amend [option]: Replaces the current commit entirely by combining s
     -m "message": Modifies the log message of the previous commit.
     --no-edit: Combines the current commit with the last one without changing the last commit message.
 
-git rebase: Moves or combines a series of commits to an entirely new base commit.
+git rebase INCOMPLETE! [option] <reference>: Moves or combines a series of commits from a feature branch to another branch.
+[option]s
+    -i: Opens interactive mode.
+    -- onto <ref1> <ref2>
+    -- d: Discards the commit from the final combined commit block during playback.
+    -- p: It doesn't edit the message or the content of the commit remaining an individual commit in the branch history.
+    -- x: Allows to run a command line shell script on each marked commit during playback.
+
+
+<reference>s
+    Branch name: Applies the commits in the current working branch to the passed branch's head. The current branch will be rebased onto the entered branch.
+    tag
+    ID of commit
+
+
+git recap: Cleans a branch history by removing meaningless or dead commits.
+
+
 
 git reflog:
 
