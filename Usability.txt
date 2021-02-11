@@ -8,6 +8,10 @@ Undoing uncommited changes: Undoes changes on the staging area and the working d
 
 Do not use git reset on a public repository because other developers may rely on the commit you deleted with this command. Instead, use git revert.
 
+Undoing git rm: Reverts the current staging area and working directory back to the HEAD commit.
+    git reset HEAD
+    git checkout .
+
 --- REVIEWING CODE ---
 
 Reviewing old commits

@@ -206,10 +206,18 @@ git reset [option] [reference]: Command that allows to undo changes once they ar
     [no_option] ID of commit: Resets the staging area to match the commit's, but not touching the working directory.
     [no_option] <file>: Removes the specified file from the staging area without changing the working directory
 
+git rm <file> [option]: Removes specific tracked files from the staging area or the working directory. It doesn't remove branches.
+[option]s
+    -f: Overrides the security check that makes sure that the files in HEAD correspond to the content of the staging area.
+    -n: Ouptuts which files to remove.
+    -r: Removes a target directory and its whole content when working in recursive mode.
+    --cached: Specifies that deletion only occurs on the staging area. Working directory is left alone.
+    --ignore-unmatch: Exits with a 0 status even if no files matched.
+    -q: Hides the output of the command.
+
 
 git requested
 
-git rm
 
 ---  ---
 
