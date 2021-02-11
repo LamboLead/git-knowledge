@@ -215,6 +215,16 @@ git rm <file> [option]: Removes specific tracked files from the staging area or 
     --ignore-unmatch: Exits with a 0 status even if no files matched.
     -q: Hides the output of the command.
 
+--- REWRITING HISTORY ---
+
+git commit --amend [option]: Replaces the current commit entirely by combining staged changes with the previous commit instead of having to create a new one.
+[option]s
+    -m "message": Modifies the log message of the previous commit.
+    --no-edit: Combines the current commit with the last one without changing the last commit message.
+
+git rebase: Moves or combines a series of commits to an entirely new base commit.
+
+git reflog:
 
 git requested
 
