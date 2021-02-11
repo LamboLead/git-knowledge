@@ -1,3 +1,6 @@
+A diff of the current master branch against master 1 week ago.
+    git diff master@{0} master@{1.week.ago}
+
 --- UNDOING CHANGES ---
 
 Undoing the last commit: The working directory is reverted to the last commit, reverted changes are staged, and Git will open text editor to modify the last commited message

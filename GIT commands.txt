@@ -239,9 +239,19 @@ git rebase INCOMPLETE! [option] <reference>: Moves or combines a series of commi
 
 git recap: Cleans a branch history by removing meaningless or dead commits.
 
+git reflog [option] <reference>: Includes information about the previous state of the reference, and makes it possible to go back to that state if needed with "git reset <reflog_output>". It's like a more detailed history for a reference
+
+[option]s
+    show: Outputs the reference reflog. Default.
+    stash: Output a reflog for a git stash.
+
+<reference>s
+    HEAD: Outputs the reflog of the HEAD pointer. Default
+    --all: Outputs the entire reflog of all the references.
+    Branch name
+    reference@{number}: Outputs the reflog from the specified number.
 
 
-git reflog:
 
 git requested
 
