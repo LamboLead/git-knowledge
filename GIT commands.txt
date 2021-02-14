@@ -256,7 +256,32 @@ git reflog [option] <reference>: Includes information about the previous state o
 git requested
 
 
----  ---
+--- SYNCING REPOSITORIES ---
+
+git remote [option]: Designed to create, view and remove connections to other repositories. 
+[option]s
+    none: Lists all the remote connections to other repositories.
+    -v: List bookmarked repository names with the URL of the corresponding repository.
+    show: Delivers a more detailed output of the configuration of a remote repository.
+    add <name> <url>: Adds a new remote connection to a remote repository.
+    rm <name>: Removes the connection to the remote repository.
+    rename <old_name> <new_name>: Renames a remote connection.
+
+
+git fetch [option]: Downloads commits, files, and references from the remote into the local repository, displaying what other members of the team have been working on without integrating it into the current working copy.
+
+[option]s
+    -all: Fetches all the remote branches.
+    --dry-run: Shows the demo run of the command without making changes.
+    -k: Keeps the downloaded pack.
+    -p: Removes the remote-tracking references that didn't existed on the remote before fetching.
+    -depth=<number>: Limits the number of commits to fetch from the tip of each remote branch history.
+
+git push <remote_repository_name> <branch_name>: Uploads the content of the local repository to the remote repository.
+
+git pull: Fetches, downloads and integrates into the current working copy.
+
+--- USING BRANCHES ---
 
 git checkout [selector]: Moves the HEAD pointer to the specified commit, resulting in the repository's status "detached". In this status, every new commit will be disposed by Git unless the HEAD is reunited with its branch.
 

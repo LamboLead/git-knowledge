@@ -1,0 +1,18 @@
+--- SYNCING REPOSITORIES ---
+
+git remote
+
+    {
+        Adds a connection named 'tom' to Tom's repository
+        git remote add tom http://dev.example.com/tom.git
+    }
+    {
+
+    }
+
+    {   
+        List all the remote branches from all the remote repositories
+        git branch -r
+    }
+
+--- WORKING WITH BRANCHES ---

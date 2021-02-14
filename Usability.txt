@@ -22,3 +22,31 @@ Do not use git commit --amend in public repositories.
 Reviewing old commits
     git log
 
+--- SYNCING REPOSITORIES ---
+
+{
+    Fetch a remote branch and update the local working state to the remote content.
+
+    1. Configure the remote repository:
+        git remote test_repo git@hostname:test/test_repo.git
+    2. Download the content of the "feature_branch" branch. This will integrate the content of the branch to the local repository:
+        git fetch test_repo feature_branch
+    3. Checkout the downloaded remote branch:
+        git checkout test_repo/feature_branch
+    4. Create a new local branch from "test_repo/feature_branch":
+        git checkout -b local_feature_branch
+}
+
+{
+    Synchronize the local repository with the central repository's master branch
+    
+    1. Show the branches that have been downloaded from "origin":
+        git fetch origin
+    2. Show the commits added to the upstream master:
+        git log master..origin/master
+    3. Check the changes:
+        git checkout master
+        git log origin/master
+    4. Merge the changes into the local master branch:
+        git merge origin/master
+}
