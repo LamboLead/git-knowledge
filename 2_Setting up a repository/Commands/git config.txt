@@ -1,0 +1,30 @@
+git config ...
+
+Sets configuration variables to control git look and operation.
+
+--- CONFIGURATION LEVELS
+
+    --local
+    Also applied when no configuration level is passed, it changes the settings at the local repository only.
+    These configuration values are found inside the repository's folder:
+        .git/config
+
+    --global
+    The application of the settings is applied to the operating system user.
+    These configuration values are found inside a file placed in a user's home directory:
+        C:\Users\<username>\.gitconfig
+
+    --system
+    This level includes all users on an operating system and all repositories.
+    These configuration values are located on the system root path
+        C:\ProgramData\Git\config
+
+-- SECTION.KEY
+Sections are the subjects to which you want to set a configuration.
+Keys are the properties of the subjects you want to set.
+
+    user.email <user_email>
+        Sets the value of the current user's email.
+
+    core.editor <path_of_code_editor_executable>
+        Sets the main code editor of your preference.

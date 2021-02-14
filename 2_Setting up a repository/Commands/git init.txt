@@ -1,0 +1,17 @@
+git init ...
+
+It creates a new repository or renitializes an existing one on the current folder. A .git subdirectory is created which includes the metadata needed to generate a new Git repository.
+
+--- OPTIONS
+
+    <path>
+        Creates a new repository on the specified path.
+
+    --bare
+        Creates a repository that has not working directory, which sole porpuse is to be used as a storage facility and push/pull from it, but never directly commit to it.
+
+    --template=<path>: Creates a template repository located on the specified path which already has default directories and files that will be copied to the new repository.
+
+    --separate-git-dir=<path>: Creates a text file which contains the path to the git repository. The file acts as a link to the .git directory. When calling this command on an existing repository, the .git directory will be moved to the specified path.
+
+    --shared=[COMPLETE THIS WITH DOCUMENTATION]: Specifies that the repository will be shared among several users, allowing them to push/pull to it.

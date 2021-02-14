@@ -1,0 +1,26 @@
+git clone ...
+
+Creates a clone/copy of an existing repository into a new directory. Also used to create remote-tracking branches for each branch in the cloned repository. It's the most common command which allows users to obtain a development copy of an existing central repository.
+
+--- OPTIONS
+
+    <repository_url> <local_path>
+        Clones a repository into the specified path on the local machine.
+
+    --branch <branch_name> <repository_url>
+        Specifies a branch which should be cloned instead of the one the remote HEAD pointer is indicating to, usually the master branch.
+
+    --branch <tag> <repository_url>
+        Clones only the specified tag from the specified repository.
+        
+    --bare
+        Creates a copy of the remote repository without working directory.
+
+    --mirror
+        Inherits the behavior of the --bare argument and clones all the extended references of the remote repository, also allowing to maintain a remote branch tracking configuration.
+
+--- EXAMPLES
+
+    Obtain a local copy of a repository stored on a server using the SSH username "x_person" accessible at "example.com"
+        git clone ssh://x_person@example.com/path/to/team-project.git
+        cd team-project
