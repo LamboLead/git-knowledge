@@ -3,11 +3,11 @@ git add ...
 Adds changes in the working directory to the staging area. Along with 'git commit', is used to record project versions into the history of the repository. It tells which files and directories' changes to track and save in the next commit.
 
 --- OPTIONS
-    <file_name>
-        Stages changes on the specified file.
+    <path/file_name>
+        Stages changes on the specified file or folder.
 
-    <pattern>
-        
+    -f
+        Forces an ignored file to be committed
 
     -i
         Opens interactive mode, which allows to select from various different options to stage, change, or discard changes.

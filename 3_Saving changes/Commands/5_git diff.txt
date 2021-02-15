@@ -1,0 +1,25 @@
+git diff ...
+
+Compares changes committed in Git. With this command, you can take two input data sets and output the modifications between them. It is used commonly in combination with 'git status' and 'git log' commands to analize the state of a git repository.
+
+--- OPTIONS
+
+    --- Comparing changes
+
+        none
+            Compares and shows all uncommitted changes throughout the whole repository since the most recent commit.
+
+        HEAD <path>
+            Compares modifications in the working directory of the specified path against the index HEAD and displays the changes that haven't been staged yet. Either of the two arguments can be commits, branches, indexes, or tags; and the command will compare modifications between them.
+
+        <reference_name_or_id>..<reference_name_or_id>
+            Compares modifications between the tips of two branches, commits, tags, or indexes. A space " " can be used instead of the two dots ".." as well. 
+        
+        <branch_name>...<branch_name>
+            Transforms the first branch into a reference of the shared common ancestor commit between the two arguments. The last input parameter stays as the tip of the second branch. Then, it compares changes between them.
+
+        <branch_name> <branch_name> <path>
+            Compares a specific file between branches.
+        
+        --color-words ...
+            Tokenizes added and removed lines by whitespace, and colors them to improve visibility. Must be inserted before the arguments you want to compare.

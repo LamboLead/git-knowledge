@@ -10,10 +10,41 @@ SAVING CHANGES
     git stash
     .gitignore
 
-3. Git main areas
+3. Git working areas
 
     - Working directory
-
+        Is the area in which the changes are made by the user. Is the area in which you write the code.
+        In the working directory, the files are visible to Git as tracked, untracked or ignored:
+            Tracked: Updated files that are on the staging area as well. Files that are ready to be committed.
+            Untracked: Files that aren't at the staging area or whose changes are not up-to-date at the staging area.
+            Ignored: Files whose names are included in the .gitignore file.
 
     - Staging area
         Is an area unique of Git which lets gather all the connected changes into highly focused snapshots. Only after submitting changes to the staging area, you can commit them to your project history.
+
+4. Ignoring files with .gitignore
+
+    There are files you may want to ignore (like logs, database files or compiled code). Git ignores files if their names are included in a file called '.gitignore'. This file must be edited and committed by hand.
+    .gitignore can handle patterns that match file names and whole directories to ignore. These patterns are created with the help of the following symbols:
+
+        **/logs                 Ignores any folder that stores 'logs' folder.
+        **/logs/debug.log       Ignores any folder that stores 'logs' folder and 'debug.log' file.
+        *.log                   Ignores any file with the extension '.log'.
+        *.log !important.log    Ignores any file with '.log' extension except 'important.log'.
+        /debug.log              Ignores 'debug.log' file located only in the repository root folder.
+        debug.log               Ignores 'debug.log' files located in any directory of the repository.
+        debug?.log              Ignores files that match 'debug' and a single character of '.log'.
+        debug[0-9].log          Ignores files that match 'debug', a single character from the range {0,9}, and '.log' extension.
+        debug[01].log           Ignores files that match 'debug', either '0' or '1', and '.log' extension.
+        debug[!01].log          Ignores files that match 'debug', any character except '0' or '1', and '.log' extension.
+        debug[a-z].log          Ignores files that match 'debug', any character from the range {a,z} and '.log' extension.
+        logs/                   Ignores folders named 'logs' and all of their content.
+        logs/**/debug.log       Ignores any file named 'debug.log' inside a folder with any name inside 'logs' folder
+        logs/*day/debug.log     Ignores any file named 'debug.log' inside a folder that finishes with 'day' inside 'logs' folder.
+
+    If you want to know why a file is being ignored by .gitignore files, run the following command:
+
+        $ git check-ignore -v <file_name>
+
+        Output:
+            file containing the pattern:line of the pattern:pattern file_name
