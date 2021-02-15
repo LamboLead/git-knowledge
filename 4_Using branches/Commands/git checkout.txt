@@ -1,0 +1,29 @@
+$ git checkout ...
+
+Switches between elements within the working tree of the repository (commits, files, and branches).
+
+'git checkout' command works in collaboration with 'git branch' when checking out branches. Then the command is ran, the working directory is updated to match the version of the program stored in the specified branch, telling Git to record all new commits there.
+
+--- OPTIONS
+
+    <branch_name>
+        Switches to the specified branch, pointing HEAD to it.
+
+    -b <branch_name>
+        Creates a new branch from HEAD and switches directly to it.
+
+    -b <branch_name_1> <branch_name_2>
+        Creates a new branch 'branch_name_1' from the tip of 'branch_name_2' instead of HEAD.
+
+    <reference_name>
+        Switches to the specified reference, it can be a commit ID, a tag, a branch, etc.
+
+--- DETACHED HEAD STATE
+
+    When you invoke 'git checkout' to older commits, you can check out commits and examine the repository's older state without creating a local branch.
+
+    When HEAD points to a branch (the tip of a branch) the state of the repository will be "Attached HEAD" and no problem will occur. However, when HEAD points to an older commit, the state becomes "Detached HEAD".
+
+    "Detached HEAD" is a warning which informs that your activity is detached from the project's development, and the changes you perform in this state will be eliminated.
+
+
