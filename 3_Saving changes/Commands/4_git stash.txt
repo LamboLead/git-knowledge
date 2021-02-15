@@ -1,0 +1,58 @@
+$ git stash ...
+
+Shelves changes you've made to your working directory, so you can come back and re-apply them. It takes both staged and unstaged changes and saves them away on the stashing area for further use.
+
+--- OPTIONS
+
+    --- Stash code
+
+        save "<message>"
+            Stash changes with a message for the stash to add context.
+
+        -u
+            Stashes the untracked files as well.
+
+        list
+            Lists all the stashed changes on the stashing area.
+
+    --- Apply and remove stashes
+
+        pop
+            Removes the first stash on the stashing area (stash@{0}) by default, and re-applies it to the working directory.
+
+        apply
+            Re-applies the first stash (stash@{0}) by default, keeping it in the stashing area.
+
+        drop
+            Deletes the first stash (stash@{0}) by default from the stashing area.
+
+        clear
+            Deletes all stashed changes from the stashing area.
+
+        pop stash@{<stash_number>}
+            Pops the specified stash on the stashing area. Same with 'git stash apply' and 'git stash drop'.
+
+    --- View stashes in detail
+        
+        show stash@{<stash_number>}
+            Shows a summary of the specified stash
+        
+        show stash@{<stash_number>} -p
+            Shows the full diff of a stash.
+
+    --- More options
+        
+        -p
+            Iterates through each change in the working copy and ask if you want to stash it or not interactively.
+
+        branch <branch_name> stash@{<stash_number>}
+            Creates a new branch from the specified stash.
+    
+--- EXAMPLES
+
+    Stash and re-apply changes
+    1. See the dirty state of the changes with 'git status'. 2. Run 'git stash'. 3. Re-apply the stashed changes removing them from the stashing area.
+
+        $ git status
+        $ git stash
+        $ git stash pop

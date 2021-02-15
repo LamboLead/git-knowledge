@@ -1,0 +1,3 @@
+git status ...
+
+Shows the tracked and untracked files and directories on the working directory and staging area. It is recommended to run this before 'git commit' to know the status of the staging area.

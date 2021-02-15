@@ -33,6 +33,6 @@ Saves all the changes in the staging area into a new commit, capturing the curre
         git status
         git commit -m "w3docs.txt file added"
     
-    Update/ammend a commit's message and content.
+    Update a commit with a new file and changed commit's message, instead of creating a new commit.
         git add "w3docs.txt"
         git commit --amend
