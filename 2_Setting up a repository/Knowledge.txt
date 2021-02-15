@@ -1,4 +1,15 @@
---- Git URLs
+SETTING UP A REPOSITORY
+
+1. Introduction
+    This section explains how to set up a git repository and initialize it for a new or an existing project.
+
+2. Commands
+    git init
+    git clone
+    git config
+    git alias
+
+3. Git URLs
 
 Git URLs are used for transferring remote repository locations to Git commands.
 

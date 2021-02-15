@@ -22,5 +22,6 @@ Creates a clone/copy of an existing repository into a new directory. Also used t
 --- EXAMPLES
 
     Obtain a local copy of a repository stored on a server using the SSH username "x_person" accessible at "example.com"
+    
         git clone ssh://x_person@example.com/path/to/team-project.git
         cd team-project

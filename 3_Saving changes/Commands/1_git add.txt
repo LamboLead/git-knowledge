@@ -1,0 +1,19 @@
+git add ...
+
+Adds changes in the working directory to the staging area. Along with 'git commit', is used to record project versions into the history of the repository. It tells which files and directories' changes to track and save in the next commit.
+
+--- OPTIONS
+    <file_name>
+        Stages changes on the specified file.
+
+    <pattern>
+        
+
+    -i
+        Opens interactive mode, which allows to select from various different options to stage, change, or discard changes.
+
+    -e
+        Opens a patch in the editor to see and edit the changes in the current working directory and the staged files. When the patch is closed, the changes are staged.
+
+    -p
+        Selects and shows all the changes made and allows to decide which of them you want to stage.

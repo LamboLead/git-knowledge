@@ -1,0 +1,19 @@
+SAVING CHANGES
+
+1. Introduction
+    The term 'saving' is similar to the Git term 'Committing'. Committing is an operation that saves a set of files, directories and their changes to the repository.
+
+2. Commands and features
+    git add
+    git commit
+    git diff
+    git stash
+    .gitignore
+
+3. Git main areas
+
+    - Working directory
+
+
+    - Staging area
+        Is an area unique of Git which lets gather all the connected changes into highly focused snapshots. Only after submitting changes to the staging area, you can commit them to your project history.

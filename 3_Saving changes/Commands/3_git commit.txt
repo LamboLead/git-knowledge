@@ -1,0 +1,38 @@
+git commit ...
+
+Saves all the changes in the staging area into a new commit, capturing the current state of the project. This feature is great because developers can come back to older commits and review, edit, delete them and more.
+
+--- OPTIONS
+
+    -a
+        Commits a snapshot of all the changes in the working directory and opens the configured text editor to pass a message. Only modifications to tracked files are included.
+
+    -m "<Commit message>"
+        Creates a commit with a passed message directly inserted by the user.
+
+    -am "<Commit message>"
+        Combines the -a and -m options to create a commit for all the staged changes and taking an inline commit message.
+
+    --amend
+        Modifies the last commit. Staged changes are added to the previous commit. It opens the text editor and changes the previously specified commit message.
+
+--- COMMIT MESSAGES
+
+    After passing 'git commit' command, the configured text editor will open and you'll be able to insert a commit message.
+
+    Commit message's format
+        1. Summary of the whole commit (less than 50 characters).
+        2. Blank line.
+        3 - End. Detailed explanation of the changes.
+
+--- EXAMPLES
+
+    1. Add a file to the staging area. 2.look at the status of the working directory and staging area. 3. Commit the changes.
+
+        git add "w3docs.txt"
+        git status
+        git commit -m "w3docs.txt file added"
+    
+    Update/ammend a commit's message and content.
+        git add "w3docs.txt"
+        git commit --amend
