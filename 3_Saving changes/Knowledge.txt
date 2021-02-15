@@ -4,10 +4,10 @@ SAVING CHANGES
     The term 'saving' is similar to the Git term 'Committing'. Committing is an operation that saves a set of files, directories and their changes to the repository.
 
 2. Commands and features
-    git add
-    git commit
-    git diff
-    git stash
+    $ git add
+    $ git commit
+    $ git diff
+    $ git stash
     .gitignore
 
 3. Git working areas

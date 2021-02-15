@@ -1,0 +1,12 @@
+USING BRANCHES
+
+1. Introduction
+    Git branches allows developers to separate from the original code base and work separately. You can create, merge, delete and switch between branches; and if there's a conflict while merging, you can solve it too.
+
+2. Commands and features in this section
+    $ git branch
+    $ git checkout
+    $ git merge
+    Merge conflicts and merging strategies
+
+

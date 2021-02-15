@@ -1,9 +1,9 @@
-git add ...
+$ git add ...
 
 Adds changes in the working directory to the staging area. Along with 'git commit', is used to record project versions into the history of the repository. It tells which files and directories' changes to track and save in the next commit.
 
 --- OPTIONS
-    <path/file_name>
+    ... <path/file_name>
         Stages changes on the specified file or folder.
 
     -f

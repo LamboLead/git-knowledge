@@ -1,0 +1,38 @@
+$ git branch ...
+
+Creates, lists and deletes branches depending on the option passed with it.
+A new branch is created to encapsulate the changes when you want to fix bugs or add new features, cleaning up the future's history before merging it.
+A branch represents an isolated line of development, and each one of them has its own working directory, staging area and project history. 
+
+Developing within isolated lines of development for a new feature will enable to operate it in parallel, and make the main branch (master) free from questionable code.
+
+--- OPTIONS
+
+    --list
+        Same as 'none'. Lists all of the branches in the repository.
+    
+    <branch_name>
+        Creates a new branch called "branch_name", but doesn't checkout to it.
+
+    -d <branch_name>
+        Deletes "branch_name". If there are unmerged changes, Git doesn't allow to delete it.
+
+    -D <branch_name>
+        Forces the deletion of "branch_name", even if there are unmerged changes.
+
+    -m <branch_name>
+        Renames the current branch to "branch_name".
+
+    -a
+        Lists all the remote branches.
+
+--- EXAMPLES
+
+    1. Creates a branch "test_branch" (note that the history of the repository remains unchanged). 2. Move the pointer HEAD from "master" to "test_branch". 3. Adds files "test_file.txt" to the staging area. 4. Commits changes within "test_branch". 5. Check the log to see the new line of development.
+
+    $ git branch "test_branch"
+    $ git checkout "test_branch"
+    $ git add "test_file.txt"
+    $ git commit -am "test_file.txt added"
+    $ git log --oneline --graph
+

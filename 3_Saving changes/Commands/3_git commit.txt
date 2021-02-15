@@ -1,4 +1,4 @@
-git commit ...
+$ git commit ...
 
 Saves all the changes in the staging area into a new commit, capturing the current state of the project. This feature is great because developers can come back to older commits and review, edit, delete them and more.
 
@@ -27,12 +27,12 @@ Saves all the changes in the staging area into a new commit, capturing the curre
 
 --- EXAMPLES
 
-    1. Add a file to the staging area. 2.look at the status of the working directory and staging area. 3. Commit the changes.
+    1. Add a file to the staging area. 2.Look at the status of the working directory and staging area. 3. Commit the changes.
 
-        git add "w3docs.txt"
-        git status
-        git commit -m "w3docs.txt file added"
+        $ git add "w3docs.txt"
+        $ git status
+        $ git commit -m "w3docs.txt file added"
     
-    Update a commit with a new file and changed commit's message, instead of creating a new commit.
-        git add "w3docs.txt"
-        git commit --amend
+    Update the last commit with a new file and change its message, instead of creating a new commit.
+        $ git add "w3docs.txt"
+        $ git commit --amend

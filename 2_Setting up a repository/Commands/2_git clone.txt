@@ -1,4 +1,4 @@
-git clone ...
+$ git clone ...
 
 Creates a clone/copy of an existing repository into a new directory. Also used to create remote-tracking branches for each branch in the cloned repository. It's the most common command which allows users to obtain a development copy of an existing central repository.
 
@@ -23,5 +23,5 @@ Creates a clone/copy of an existing repository into a new directory. Also used t
 
     Obtain a local copy of a repository stored on a server using the SSH username "x_person" accessible at "example.com"
     
-        git clone ssh://x_person@example.com/path/to/team-project.git
-        cd team-project
+        $ git clone ssh://x_person@example.com/path/to/team-project.git
+        $ cd team-project
