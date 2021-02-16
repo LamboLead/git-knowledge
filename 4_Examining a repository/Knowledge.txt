@@ -1,0 +1,10 @@
+EXAMINING A REPOSITORY
+
+1. Introduction
+    A Git repository can be examined with several commands. This section will cover everything related to the state of the working directory and the staging area, references displaying particular points in the history, and display of author metadata attached to the specific commited lines and the committed snapshots.
+
+2. Commands
+    $ git status
+    $ git log
+    $ git tag
+    $ git blame

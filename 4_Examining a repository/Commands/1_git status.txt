@@ -1,0 +1,37 @@
+$ git status ...
+
+Shows the state of the working directory and staging area. It allows you to see the staged changes using 'git add' and 'git commit', and the files that aren't being tracked by Git.
+
+It is recommended to run this before 'git commit' to know the status of the staging area.
+
+--- OPTIONS
+    -s
+        Outputs in the short format.
+
+    -b
+        Displays the branch and tracking information in the short format.
+
+    --porcelain
+        Outputs in an easy-to-parse format for scripts. It remains stable accross Git versions and does not take into consideracion the user configuration.
+
+    --long
+        Default. Outputs in the long format.
+
+    -u=[mode]
+        Displays the untracked files.
+        Modes:
+            no: Displays no untracked files.
+            normal: Displays untracked files and directories.
+            all: Displays individual files in untracked directories.
+
+    -- ignored
+        Displays ignored files
+
+    -z
+        Terminates entries with NUL. If nor format is given, the '--porcelain' output format is used.
+
+    --column=[option]
+        Displays untracked files in columns
+        FILL OPTIONS.
+
+

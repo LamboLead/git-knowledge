@@ -1,0 +1,48 @@
+$ git log ...
+
+Shows the commit history. It is used for listing and filtering the project history and searching for particular changes.
+
+The output can be personalized differently, depending on the following options:
+
+--- OPTIONS
+
+    none
+        Shows the whole commit history. Use space for scrolling, and 'q' for exiting if the log output takes up multiple screens.
+
+    -n <number>
+        Outputs the specified number of commits.
+
+    --oneline
+        Fits each commit in a single line.
+
+    --graph
+        Draws a text-based graph of the commits and their respective branches.
+
+    --decorate
+        Adds the names of branches or tags of the displayed commits.
+
+    --stat
+        Besides the usual log information, it includes changed files and the number of added and deleted lines from them.
+
+    -p
+        Shows the patch for each commit as well as their full diff.
+
+    --author="<pattern>"
+        Searches for commits by a specified author. <pattern> can be a string or a regular expression.
+
+    --grep="<pattern>"
+        Searches for commits with a specified message.
+
+    <since>..<until>
+        Displays commits that occur between <since> and <until> arguments. Both can be either a commit ID, a branch name, HEAD, or any revision reference.
+
+    <file_name>
+        Displays commits that include the specified file, allowing to see the file's history.
+
+--- EXAMPLES
+
+    Show a full diff of all the changes made by Bob Smith to the file 'w3docs.txt'
+        $ git log --author="Bob Smith" -p "w3docs.txt"
+
+    Show a brief overview of all the commits that are in the branch 'some_feature' instead of 'master'
+        $ git log --oneline master..some_feature
