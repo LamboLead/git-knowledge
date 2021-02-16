@@ -1,3 +1,4 @@
 This piece of code isn't affected by "git merge"
 
 This piece of code belongs to "master" and will be affected by "git merge"
+This piece of code belongs to "damn_branch" and will be affected by "git merge"
