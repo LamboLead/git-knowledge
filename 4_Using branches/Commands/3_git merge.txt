@@ -74,3 +74,52 @@ It also merges multiple commits into one history if arguments are commits.
         $ git reset:
             Resets conflicting files to a known good state.
 
+--- MERGING STRATEGIES
+
+    When the work is complete and ready to be merged, you should choose between the following merging strategies:
+
+    -s recursive <branch_name_1> <branch_name_2>
+        Default strategy. Detects and manages merges that involve renames, but it cannot use detected copies. There are more merging strategies that derives from this one that can be found below this section.
+
+    -s resolve <branch_name_1> <branch_name_2>
+        Uses a 3-way merge for resolving branches. It is safe, fast, and detects criss-cross merge ambiguities in detail.
+
+    -s octopus <branch_name_1> <branch_name_2> <branch_name_N>
+        Engaged by default when two or more branches to merge are passed. It refuses if the merge has conflicts that need manual resolution.
+
+    If not specified, 'git merge' will automatically select a merge strategie based on the provided branches.
+
+--- MERGING STRATEGIES DERIVED FROM RECURSIVE
+
+    -s ours <branch_name_1> <branch_name_2> <branch_name_N>
+    Forces conflicting parts to be auto-resolved favoring 'our' version. Intended to replace an old history of side branches.
+
+    -s theirs <branch_name_1> <branch_name_2>
+    Forces conflicting parts to be auto-resolved favoring 'their' version.
+
+    -s patience
+        Spends much time to avoid mis-merges that occur because of unimportant matching lines.
+
+    -s diff-algorithm
+        Instructs "merge-recursive" to use a different diff algorigthm that helps to avoid mis-merges on unimportant matching lines.
+
+    -s ignore-space change
+    -s ignore-all-space
+    -s ignore-space-at-eol
+    -s ignore-cr-at-eol
+        Targets whitespace characters.
+
+    -s renormalize
+        Runs a check-out and check-in on all of the file stages when resolving a 3-way merge.
+
+    -s no-normalize
+        Disables the renormalize option.
+
+    -s no-renames
+        Ignores renamed files during merge.
+
+    -s find-renames=n
+        Turns on the rename detection passing a similarity threshold. The n value is 100%.
+
+    -s subtree <branch_name_1> <branch_name_2>
+        It is a modified version of the recursive strategy. Useful when merging branches that have subtrees.
