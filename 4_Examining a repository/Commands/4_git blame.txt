@@ -1,0 +1,23 @@
+$ git blame ...
+
+Is a flexible tool which most important function is to display the author's metadata attached to a particular committed line in a file. It is used for exploring the file history and finding out the last author who changed the line.
+
+--- OPTIONS
+
+    <file_name>
+        Outputs the metadata of the specified file commit by commit (author, date, lines changed, etc).
+
+    -L <number_1>,<number_2> <file_name>
+        Outputs the metadata of the requested line range limited by <number_1> and <number_2>.
+
+    -e <file_name>
+        Displays the author's email instead of username.
+
+    -w <file_name>
+        Ignores whitespace changes (indenting, new lines, spacing).
+
+    -M <file_name>
+        Detects moved or copied lines within the same file. This will report the original author of the lines instead of the last author that moved or copied them.
+
+    -C <file_name>
+        Detects moved or copied lines from other files, reporting their original author.

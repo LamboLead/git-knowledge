@@ -1,0 +1,8 @@
+$ git reset ...
+
+Manages the changes on the working directory and staging area.
+
+
+--- OPTIONS
+    --mixed
+        Pushes back the changes from the staging area to the working directory.

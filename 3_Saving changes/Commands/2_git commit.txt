@@ -14,7 +14,7 @@ Saves all the changes in the staging area into a new commit, capturing the curre
         Combines the -a and -m options to create a commit for all the staged changes and taking an inline commit message.
 
     --amend
-        Modifies the last commit. Staged changes are added to the previous commit. It opens the text editor and changes the previously specified commit message.
+        Undoes the last commit, opens the text editor to change the last commit's message. Once the commit message is finished, all the changes on the staging area will be uploaded to the updated commit.
 
 --- COMMIT MESSAGES
 

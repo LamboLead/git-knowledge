@@ -1,6 +1,6 @@
 $ git log ...
 
-Shows the commit history. It is used for listing and filtering the project history and searching for particular changes.
+Shows the commit history of the branch that HEAD is pointing to. It is used for listing and filtering the project history and searching for particular changes.
 
 The output can be personalized differently, depending on the following options:
 
@@ -32,6 +32,12 @@ The output can be personalized differently, depending on the following options:
 
     --grep="<pattern>"
         Searches for commits with a specified message.
+
+    -S "<pattern>"
+        Displays all initial commits and their metadata with a particular added or changed code specified in <pattern> from any file.
+
+    --branches=<pattern>
+        Displayes the commit history for the branches that match the specified pattern.
 
     <since>..<until>
         Displays commits that occur between <since> and <until> arguments. Both can be either a commit ID, a branch name, HEAD, or any revision reference.

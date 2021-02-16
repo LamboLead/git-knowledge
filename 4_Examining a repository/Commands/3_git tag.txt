@@ -1,0 +1,45 @@
+$ git tag ...
+
+Creates and manages tags for your git repository.
+
+Tags are references showing particular points in a Git history. Their main function is to capture a point in a Git history that marks a version release. They don't change, and after a tag is created, it has no commit history.
+
+When running 'git tag ...', Git creates a tag on the commit pointed by HEAD.
+
+--- TAG TYPES
+
+    Annotated
+        Git stores these tags as full objects which include the following additional metadata: tagger name, email, date, and tagging message. They can be additionally signed and verified with GPG (GNU Privacy Guard) for security purposes.
+        These tags are public, and they are created with the command:
+            $ git tag -a <tag_name>
+
+    Lightweight
+        These are tags that doesn't have metadata.
+        These tags are private, and can be created with this command:
+            $ git tag <tag_name>
+
+--- OPTIONS
+    none
+        Outputs a list of all stored tags.
+
+    -l <pattern>
+        Outputs the list of tags that match the specified pattern.
+    
+    [tag_type] <tag_name> <commit_ID>
+        Creates a tag for the specified commit identified with the commit ID.
+
+    [tag_type] -f <tag_name> <commit_ID>
+        Replaces the name of the tag that points to the same old commit.
+    
+    -d <tag_name>
+        Deletes the specified tag.
+
+--- EXAMPLES
+
+    Push 'v1.3' tag to a remote repository:
+        $ git push git@github.com:gr8/gittagdocs.git v1.3
+
+    Checkout the state of a repository at the 'v1.3' tag:
+        $ git checkout v1.3
+
+

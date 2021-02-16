@@ -3,3 +3,8 @@ UNDOING CHANGES
 1. Introduction
     Git "undoes" changes by using a set of commands. Each of them serve specific purposes for undoing changes on local and public repositories.
 
+2. Commands
+    $ git clean
+    $ git reset
+    $ git revert
+    $ git rm
