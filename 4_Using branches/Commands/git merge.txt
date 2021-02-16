@@ -29,8 +29,48 @@ It also merges multiple commits into one history if arguments are commits.
 --- OPTIONS
 
     --no-ff <branch_name>
-        Merges a commit during a fast-forward merge to generate a merge commit
+        Creates a new commit during a fast-forward merge instead of uniting both branches in the last commit created.
 
 --- RESOLVING CONFLICTS
-    Conflicts appear when you want to merge two branches, and the same part of the same file is changed in both of them. They only appear in 3-way merges.
-    When this happens, git lets you choose which version to keep, using edit/stage/commit workflow for resolving merge conflicts.
+
+    These are the types of merging conflicts:
+
+    Merge failure on start:
+        Occurs when the pending changes in the working directory or staging area of the project aren't yet committed.
+        Solution:
+            Commit, stash or discard the changes before merging.
+
+    Merge failure during merge:
+        Occurs when when you want to merge two branches, and the same part of the same file is changed in both of them. They only appear in 3-way merges.
+        Solution:
+            Git lets you choose which version to keep, using edit/stage/commit workflow for resolving merge conflicts.
+
+    These are the commands that you may find useful when dealing with merge conflicts:
+    
+    General:
+        $ git status
+            Helps find conflicting files
+
+        $ git log --merge
+            Creates a log with a list of commits having conflict between the merging branches.
+
+        $ git diff
+            Finds diferences between the states of the files, predicting and preventing merge conflicts.
+
+    To solve failure on start:
+        $ git checkout
+            Undoes changes to the files changing branches.
+
+        $ git reset --mixed
+            Undoes changes to the working directory and staging area. Resets the commit.
+
+        $ git add & $ git commit
+            Commits changes.
+
+    To solve failure on merge:
+        $ git merge --abort
+            Exits from the merge process and returns the branch to the state before it began.
+
+        $ git reset:
+            Resets conflicting files to a known good state.
+
