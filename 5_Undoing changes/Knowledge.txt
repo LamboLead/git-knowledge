@@ -8,3 +8,4 @@ UNDOING CHANGES
     $ git reset
     $ git revert
     $ git rm
+    $ git commit --amend

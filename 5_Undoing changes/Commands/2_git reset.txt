@@ -1,8 +1,22 @@
 $ git reset ...
 
-Manages the changes on the working directory and staging area.
+Command used to undo changes. It operates in the commit history, the staging area, and the working directory (depending on the way it's invoked).
 
+'git reset' has some similarities with 'git checkout', as they both operate on HEAD:
+    'git checkout' moves the HEAD pointer to the specified commit, and the repository enters the state 'Detached HEAD'.
+    'git reset' command switches both HEAD and branch references to the defined commit, changing the state of the three trees as well (working directory, staging area, and commit history).
+
+The three options below '--soft', '--mixed', and '--hard' define the modification of the staging area and working directory.
 
 --- OPTIONS
-    --mixed
-        Pushes back the changes from the staging area to the working directory.
+
+    (If no commits are specified, the commit is the one that HEAD is pointing to)
+
+    --mixed <commit_ID>
+        Same as none. The staging area is reset and the pending changes from the staging area are placed in the working directory. It doesn't affect the commit history
+
+    --hard <commit_ID>
+        The commit history will be reset to the stated commit, and any work done down the commit history will be lost. The staging index and the working directory are reset.
+
+    --soft <commit_ID>
+        Resets the commit history to the specified commit, and any work done down the commit history will be lost. It doesn't affect the staging area or working directory.

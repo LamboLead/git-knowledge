@@ -1,0 +1,23 @@
+$ git clean ...
+
+Runs in untracked files only. It cleans the working directory from untracked files creating a hard file system deletion. To perform this command, a "force" option that will be explained below is required.
+
+--- OPTIONS
+
+    -n
+        Shows the files that are going to be removed, but doesn't remove them.
+
+    -f
+        Force option. Deletes untracked files from the current directory, except the untracked folders or files specified within .gitignore file.
+
+    -f <path_to_folder>
+        Removes untracked folders (default command will ignore folders).
+
+    -x
+        Removes ignored files as well.
+
+    -dn
+        Shows the directories that are going to be removed (note that '-dn' is a combination of '-d' and '-n' options. You can combine '-d', '-x', and '-f' as well).
+
+    -i
+        Opens interactive mode, allowing for more detailed options.

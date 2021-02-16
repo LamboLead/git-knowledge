@@ -1,0 +1,12 @@
+--- GIT'S THREE TREES
+
+    Git works with three environments:
+
+    Working directory
+        Represents the files on the file system of the computer that are available to the code editor for applying changes.
+
+    Staging area
+        It tracks the changes that took place in the working directory, and that are ready to commit.
+
+    Commit history
+        Saves permanent snapshots of the changes placed on the staging area.
