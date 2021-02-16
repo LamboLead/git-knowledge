@@ -1,0 +1,31 @@
+$ git merge ...
+
+Integrates the independent lines of development into a single branch, checks out to the destination branch and deletes the old one. It also merges multiple commits into one history
+
+--- MERGING PROCESS
+
+    1. Point HEAD to the correct merge-receiving branch with 'git checkout'. Run 'git status' before that to know which branch HEAD is pointing to.
+        $ git status
+        $ git checkout <receiving_branch_name>
+    
+    2. (optional) The receiving and merging branch should be updated with the latest remote changes running 'git fetch'. Then, update the master branch with 'git pull'
+        $ git fetch ...
+        $ git pull ...
+
+    3. Merge the branches
+        $ git merge <merged_branch_name>
+
+--- FAST FORWARD MERGE
+
+    It occurs when the path from the current branch to the branch to be merged is linear (only one line of development). The fast-forward merge combines the histories, as all the commits that are reachable from the merging branch are available through the current branch.
+    It is used to fix bugs and integrate small features to the main branch.
+
+--- 3-WAY MERGING
+
+    Occurs when the two histories are diverged (two lines of development). It uses a dedicated commit to combine the two histories.
+    It is used to integrate long-running features to the main branch, as the main branch keeps progressing.
+
+--- OPTIONS
+
+    --no-ff <branch_name>
+        Merges a commit during a fast-forward merge to generate a merge commit
