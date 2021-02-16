@@ -1,6 +1,7 @@
 $ git merge ...
 
-Integrates the independent lines of development into a single branch, checks out to the destination branch and deletes the old one. It also merges multiple commits into one history
+Integrates the independent lines of development into a single commit on a single branch. It won't combine the data or erase the merged branch.
+It also merges multiple commits into one history if arguments are commits.
 
 --- MERGING PROCESS
 
@@ -15,17 +16,21 @@ Integrates the independent lines of development into a single branch, checks out
     3. Merge the branches
         $ git merge <merged_branch_name>
 
---- FAST FORWARD MERGE
+--- MERGING TYPES
 
-    It occurs when the path from the current branch to the branch to be merged is linear (only one line of development). The fast-forward merge combines the histories, as all the commits that are reachable from the merging branch are available through the current branch.
-    It is used to fix bugs and integrate small features to the main branch.
+    Fast-forward merge:
+        It occurs when the path from the current branch to the branch to be merged is linear (only one line of development). The fast-forward merge combines the histories, as all the commits that are reachable from the merging branch are available through the current branch.
+        It is used to fix bugs and integrate small features to the main branch.
 
---- 3-WAY MERGING
-
-    Occurs when the two histories are diverged (two lines of development). It uses a dedicated commit to combine the two histories.
-    It is used to integrate long-running features to the main branch, as the main branch keeps progressing.
+    3-way merge:
+        Occurs when the two histories are diverged (two lines of development). It uses a dedicated commit to combine the two histories.
+        It is used to integrate long-running features to the main branch, as the main branch keeps progressing.
 
 --- OPTIONS
 
     --no-ff <branch_name>
         Merges a commit during a fast-forward merge to generate a merge commit
+
+--- RESOLVING CONFLICTS
+    Conflicts appear when you want to merge two branches, and the same part of the same file is changed in both of them. They only appear in 3-way merges.
+    When this happens, git lets you choose which version to keep, using edit/stage/commit workflow for resolving merge conflicts.
