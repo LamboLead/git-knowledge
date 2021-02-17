@@ -1,0 +1,16 @@
+$ git commit --amend ...
+
+While working with Git, you can often forget to format the commit or stage a file. It replaces the current commit entirely by combining staged changes with the previous commit instead of having to create a new one.
+
+--- OPTIONS
+    none
+        Modifies the commit and opens the text editor to modify the previous commit message.
+
+    -m "commit_message"
+        Modifies the commit and updates the commit message of the previous commit with the specified message.
+
+    --no-edit
+        Modifies the commit but doesn't change its commit message.
+
+--- NOTES
+    The previous commit will not be removed from the current branch. That's why you shouldnt amend a commit which is being developed by other team members in a public repository.

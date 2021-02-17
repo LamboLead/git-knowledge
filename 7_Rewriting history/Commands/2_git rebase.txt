@@ -1,0 +1,76 @@
+$ git rebase ... INCOMPLETE!!!
+
+Moves a series or commits from a feature branch, and puts them on the tip of another branch.
+
+It helps keep a linear project history.
+
+-- FUNCTIONING
+
+    Imagine you have the following branches with their respective commits:
+
+        'master'
+            master_commit_1
+            master_commit_2
+            master_commit_3
+                'feature_branch'
+                    feature_commit_1
+                    feature_commit_2
+            master_commit_4
+        
+    You want to rebase 'feature_branch' into master. So you run:
+
+        $ git checkout 'feature_branch'
+        $ git rebase 'master'
+
+    Output:
+        'master'
+            master_commit_1
+            master_commit_2
+            master_commit_3
+            master_commit_4
+                'feature_branch'
+                    feature_commit_1
+                    feature_commit_2
+
+    Note that all of the commits from 'feature_branch' are moved to the tip of 'master'. Now, you want to rebase 'feature_branch' completely into 'master':
+        $ git checkout 'master'
+        $ git rebase 'feature_branch'
+
+    Output:
+        'master'
+            master_commit_1
+            master_commit_2
+            master_commit_3
+            master_commit_4
+            feature_commit_1
+            feature_commit_2
+
+    Note that there is only one line of development, and all the commits from 'feature_branch' are now integrated into 'master''s commit history.
+
+--- OPTIONS
+
+    -i
+        Opens interactive mode.
+    
+    --onto <new_base_branch> <old_base_branch_1> <old_base_branch_2> ...
+        Provides advanced rebase application as it allows passing specific branch names as the rebase tips.
+
+    --continue
+
+    --abort
+
+    -- d
+        Discards the commit from the final commit block during execution.
+
+    -- p
+        It doesn't edit the message or the content of the commit, remaining an individual commit in the branch history.
+    
+    -- x
+        Allows to run a command line shell script on each marked commit during execution.
+
+
+--- NOTES
+    Using 'git rebase' may cause more conflicts than 'git merge', especially in cases when you have 'feature_branch' strayed from 'master'. Sooner or later you may decide to rebase against 'master', which may contain some new commits that may be conflictive.
+    Solution: Rebase 'feature_branch' more often and make more periodic commits.
+
+    Never rebase commits after publishing them in a public repository. If you do it, the old commit will be replaced by a new one, appearing that part of your project has disappeared.

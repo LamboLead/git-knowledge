@@ -1,0 +1,10 @@
+REWRITING HISTORY
+
+1. Introduction
+    The following commands are useful to rewrite the history of a repository if needed.
+
+2. Commands and features
+    $ git commit --amend
+    $ git reflog
+    $ git rebase
+

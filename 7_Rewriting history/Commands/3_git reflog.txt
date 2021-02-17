@@ -1,0 +1,55 @@
+$ git reflog ... INCOMPLETE!!!
+
+Records updates made to the tip of branches. It allows to return to commits, even the ones not referenced by any branch or tag. After rewriting history, the reflog includes information about the previous state of branches and makes it possible to go back to that state if needed.
+
+It works as a log for a reference, like a branch, stash or HEAD.
+
+--- OPTIONS
+
+    show <reference> OR <reference>
+        Outputs the reference log for the specified reference. The default is HEAD.
+        
+    show --all
+        Outputs the reference log for all the references
+
+    expire <reference>
+        Cleans old or unapproachable reflog entries. There's a risk of data loss.
+        If a reflog entry isn't accessed on the accessible time, it will be deleted by Git. By default, the reflog date of expiry is set to 90 days.
+
+    delete <reflog_entry>
+        Deletes passed reflog entries. There's a risk of data loss as well.
+
+    stash
+        Outputs the reference log for a stash.
+
+--- TIMED REFERENCE LOGS
+    There's an attached timestamp to each reflog entry. Reference logs can be filtered with the following time qualifiers:
+        1.minute.ago
+        1.hour.ago
+        1.day.ago
+        yesterday
+        1.week.ago
+        1.month.ago
+        1.year.ago
+        2011-05-17.09:00:00
+    You can add plural forms:
+        5.hours.ago
+    You can also combine time qualifiers:
+        1.week.3.hours.ago
+
+    Example:
+    
+        Output a diff of the current master branch against master 1 week ago:
+            $ git diff master@{0} master@{1.week.ago}
+
+--- RECOVERING LOST COMMITS
+
+    Commits can be recovered if, for example, they are rebased and squashed while running 'git rebase'.
+
+    Run the following code:
+        $ git reflog
+
+    It will output the operations made to HEAD. There will be some devoted to the rebasing command. The squashing commit must be passed into 'git reset' to restore the squashed commits:
+        $ git reset HEAD@{2}
+    
+
