@@ -1,0 +1,15 @@
+$ git revert ...
+
+Creates a new commit in which the commit history is reverted to the specified commit.
+It is a safer operation than 'git reset' because it doesn't delete commits.
+
+--- OPTIONS
+    
+    -e
+        Default. Opens the text editor and prompts you to edit the commit message before committing the revert.
+
+    --no-edit
+        It doesn't open the text editor.
+
+    -n
+        Adds the inverse modifications to the staging area and working directory instead of creating a new commit with the reversed history.

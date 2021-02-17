@@ -1,0 +1,42 @@
+$ git rm ...
+
+Removes tracked files from the staging area. It can also be used to remove files from both the staging area or the working directory. It doesn't work on branches.
+
+--- OPTIONS
+
+    <pattern>
+        Removes the specified files stated in <pattern>.
+
+    -f <pattern>
+        Forces the removal of files in case their changes in HEAD don't correspond to the content of the staging index and working directory.
+
+    -n <pattern>
+        Outputs which files will be removed.
+
+    -r <pattern>
+        Removes a target directory and its whole content.
+
+    --
+        Makes a clear distinction between the list of file names and the arguments passed to the command
+
+    --cached
+        Specifies that the deletion should only occur on the staging area.
+
+    --ignore-unmatch
+        Exits with a 0 status if no files matched.
+
+    -q
+        Hides the output of the command. 'git rm' usually outputs one line per file removed.
+
+--- UNDOING 'git rm'
+
+    As git rm only updates the staging index and the working directory, these modifications will not persist until a new commit is created. Run the following command to revert the current staging index and working directory back to the HEAD commit:
+        $ git reset HEAD
+
+--- EXAMPLES
+
+    Remove all children files with '.txt' extension of 'directory' folder.
+        $ git rm "folder/\*.txt"
+
+    Remove all files with '.sh' extension from the working directory and staging area without checking if these changes match with one another.
+        $ git -f "*.sh"
