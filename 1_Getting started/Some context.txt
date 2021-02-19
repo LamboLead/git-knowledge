@@ -1,0 +1,61 @@
+1. Version Control System
+    Is a software tool that allows a software team to manage changes to the source code over time. It makes it easier to collaborate in different projects separating their tasks through branches, and gives the possibility to turn back to earlier versions to compare or fix mistakes.
+
+    Types of VCS
+
+        Local VCS
+            Is a simple database stored locally that keeps all the changes to files under revision control. It allows users to make their revisions of a document, commit changes, and merge them.
+
+        Centralized VCS
+            Is a database stored in a server to which a number of clients have access to check out files and version them.
+            Popular Centralized VCS: CVS, Subversioin , and Perforce.
+
+        Distributed VCS
+            In these systems, clients fully mirror the repository, including its full history. They have the advantage that if a server dies, the client repositories can be copied back up to the server to restore it.
+            Popular distributed VCS: Git, Mercurial, Bazaar, or Darcs.
+
+        Benefits of Version Control Systems
+        - Long-term change history
+            The changes made by developers are stored in history. And they allow going back to previous versions if needed.
+
+        - Branching and merging
+            It helps work in an independent manner without interfering with each other's work. It brings the works together and allowws seeing if there are conflicts between those works.
+
+        - Traceability
+            Ability to trace and annotate each change with a message describing its purpose.
+
+2. Git
+    Is a open-source Version Control System widely used in the programming world. It tracks changes in the source code during software development, is speedy, efficient and easy to learn.
+    It provides cheap local branching, convenient staging areas, and multiple workflows.
+        
+3. Popular Git solutions
+
+    - GitHub: Is the lartest repository hosting platform. It's based in Git, and permits to host and review code, manage projects and build software.
+    - Bitbucket: Its main focus is Git hosting, providing free unlimited private repositories, Jira and Trello integration, and built-in continuous delivery.
+    - GitLab: Is a Git-based hosting platform that provides continuous integration and delivery, agile development, Auto DevOps, etc.
+
+4. SSH keys
+    SSH keys are an access credential used in SSH protocol (Secure Shell). A Secure Shell is a network protocol that helps to login from one computer to another securely, and with which you can manage networks, operating systems, and configurations. Git use them as a security mechanism to provide access to the local machine when connecting to remote repositories.
+
+    SSH keys always come in pairs composed of a public key and a private key:
+        Public keys determine who can access each system.
+        Private keys identify users and give them access.
+
+    The SSH-agent is the tool responsible for holding private keys and arrange SSH requests.
+
+    How to set up SSH keys?
+
+    1. Open PowerShell as an administrator and run the following:
+        > ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+    2. Choose a file location:
+        > Enter a file in which to save the key (<path_to_ssh_key>): [ENTER]
+
+    3. Add a secure passphrase, required any time the SSH key is used:
+        > Enter passphrase (empty for no passphrase): <passphrase>
+        > Enter same passphrase again: <passphrase>
+    
+    4. Add the new key to the SSH-agent running the following command in a Git bash:
+        $ eval "$(ssh-agent -s)"
+
+    5. Execute the following in the PowerShell to add the new key to the local SSH-agent:
+        ssh-add -K <path_to_ssh_key>

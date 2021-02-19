@@ -1,0 +1,40 @@
+1. Git repository
+
+    Is a storage of your project files, which makes it possible to save code versions and have access to them.
+
+2. Git's three trees
+
+    Git repositories run on the following environments:
+
+    Working directory
+        Represents the files on the file system of the computer that are available to the code editor for applying changes.
+
+    Staging area
+        It tracks the changes that took place in the working directory, and that are ready to commit.
+
+    Commit history
+        Saves permanent snapshots of the changes placed on the staging area.
+
+3. Git URLs
+
+Git URLs are used for transferring remote repository locations to Git commands. They use a series of different protocols:
+
+    - Git: Provides a similar service as SSH but without any authentication. It is fast while transferring.
+        git://host.xz[:port]/path/to/repo.git/
+
+    - SSH: Secure Shell Host is a network protocol, which helps to login from one computer to another securely. It has easy configuration, secure access, and data compression before its transfer. It doesn't support anonymous access to the Git repository.
+        git clone ssh://user@server/project.git
+
+    - HTTPS: HyperText Transfer Protocol. It is simple, light, and secure because it encrypts the content. However, it's inneficient for the client because it takes a lot of time to clone or fetch from the repository.
+        git clone http://example.com/gitproject.git
+
+    - Local: Basic protocol in which the remote repository is in another directory on disk. The path to the repository can be used as the URL for cloning a repository.
+        git clone /opt/git/project.git
+
+. Best practices
+    - Commit frequently to give namy opportunities to go back and undo the work if needed.
+    - Work from latest version by pulling or fetching the latest code available before updating to avoid conflicts.
+    - Annotate with detail each commit to make reviewing code easier.
+    - Review code in the staging area before committing.
+    - Embrace the branch workflow in your team to work on separate lines of development and achieve more with more organization.
+    - Establish shared pattens of collaboration in your team.
