@@ -1,0 +1,23 @@
+$ git push ...
+
+Uploads the content of the local to the remote repository. It is commonly used to publish the local changes to the central repository.
+
+--- OPTIONS
+    <remote_repository> <branch_to_push>
+        Pushes the specified branch to the specified remote repository, creating a local branch in the destination repository.
+
+    <remote_repository> <branch_to_push> --force
+        Forces the push, even if it results in a non-fast-forward merge. Be sure that nobody has pulled the commits before using this option.
+
+    <remote_repository> --all
+        Pushes all of the local branches to the remote repository.
+
+    <remote_repository> --tags
+        Pushes the tags from the local branches to the remote repository.
+
+    <remote_repository> :<branch_to_pull>
+        Deletes the remote branch.
+
+--- FORCE PUSHING
+
+    Git can refuse the push request if the history of the central repository does not match the local one. In this case, you should pull the remote branch, merge it into the local repository, and then push again. The '--force' option matches the remote and local branch, cleaning the upstream changes from the last pull.

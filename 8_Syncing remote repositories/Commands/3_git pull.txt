@@ -1,0 +1,38 @@
+$ git pull ...
+
+Fetches and downloads content from the remote repository and integrates changes into the local repository. Is the combination of 'git fetch' followed by 'git merge'.
+
+--- FUNCTIONING
+
+Assume there is a repository with a master branch and a remote origin. The 'git pull' command downloads the changes from the point where the local and the remote master branches diverge. Then it merges the dowloaded commits and the local commits into a single commit in the local master branch.
+
+--- OPTIONS
+
+    none
+        Equivalent to 'git fetch origin HEAD' and 'git merge HEAD'. HEAD being the reference that points to the current branch.
+
+    <remote_repository>
+        Fetches the remote content and directly merges it into the local copy (equivalent to 'git fetch <remote_repository> followed by 'git merge origin/<branch_to_download>').
+
+    --no-commit <remote_repository>
+        Fetches the remote content but doesn't create a merge commit.
+
+    --rebase <remote_repository>
+        Runs 'git rebase' instead of 'git merge' on the background after downloading the remote branch.
+
+    --verbose
+        Shows downloaded content and merge details during execution.
+
+--- EXAMPLES
+
+    1. Execute a checkout to 'new_feature' branch. 2. Pull down 'new_feature' branch from 'remote_repo'. After downloading it will initiate a git merge on 'new_feature'.
+
+        $ git checkout new_feature
+        $ git pull remote_repo
+
+    1. Checkout to 'master' branch. 2. Pull down 'master' from central remote repository and rebase into local 'master'. This will put your local changes on top of what everybody else has done.
+
+        $ git checkout master
+        $ git pull --rebase origin
+    
+    

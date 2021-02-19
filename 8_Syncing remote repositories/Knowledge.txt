@@ -1,0 +1,10 @@
+SYNCING REPOSITORIES
+
+1. Introduction
+    Git gives the opportunities to share branches between repositories instead of a single changeset. This section will cover the set of commands needed in the syncing process.
+
+2. Commands and features
+    $ git remote
+    $ git fetch
+    $ git push
+    $ git pull

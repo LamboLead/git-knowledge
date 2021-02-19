@@ -1,0 +1,34 @@
+$ git remote ...
+
+Designed to create, view and remmove connections to other repositories.
+
+--- OPTIONS
+
+    none
+        Lists all the remote connections to other repositories.
+
+    -v
+        List bookmarked repository names with their URL.
+
+    -add <repository_name> <repository_url>
+        Adds a new remote connection to a remote repository.
+
+    rm <repository_name>
+        Removes the connection to the remote repository.
+
+    rename <repository_old_name> <repository_new_name>
+        Renames a remote connection.
+
+    get-url <repository_name>
+        Outputs the url for a remote repository.
+
+    show <repository_name>
+        Outputs information about the remote repository.
+
+    prune <repository_name>
+        Deletes all the local branches for the specified repository that dont exist on the remote repository. Insert '--dry-run' to list which branches will the command delete.
+
+--- THE 'origin' REMOTE REPOSITORY
+    By executing 'git clone', you will automatically create a remote connection called 'origin', that points back to the cloned repository.
+    Creating a local copy of the central directory is an easy method for pulling upstream modifications or publishing local commits. That is why the central repository of many Git-based projects is called 'origin'.
+
