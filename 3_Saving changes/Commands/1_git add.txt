@@ -6,6 +6,9 @@ Adds changes in the working directory to the staging area. Along with 'git commi
     ... <path/file_name>
         Stages changes on the specified file or folder.
 
+    -A
+        Stages changes to all files in the working directory
+
     -f
         Forces an ignored file to be committed
 

@@ -2,6 +2,8 @@
 
 cd [path]: Changes path to specified
 
+ls: List all the current files and folders in the current path.
+
 echo "[file_content]" >> [file_name]: Creates a new file or writes into it.
 
 --- SETTING UP A REPOSITORY ---
