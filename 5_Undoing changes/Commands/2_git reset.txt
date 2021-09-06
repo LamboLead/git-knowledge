@@ -20,7 +20,7 @@ The three options below '--soft', '--mixed', and '--hard' define the modificatio
         If <number> is used, the commit history will be reset to the number of commits stated before the stated commit. This option applies to '--mixed' and '--soft' as well.
 
     --soft <commit_ID>
-        Resets the commit history to the specified commit, and any work done down the commit history will be lost. It doesn't affect the staging area or working directory.
+        Resets the commit history to the specified commit, and any work done down the commit history will be lost. It doesn't affect the staging area or working directory. (IMPORTANT: Use this if you committed any mistakes and you want to delete the commits that have those mistakes, without changing the working directory).
 
     <file>
         Removes the specified file from the staging area.

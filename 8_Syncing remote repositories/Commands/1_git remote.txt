@@ -10,7 +10,7 @@ Designed to create, view and remmove connections to other repositories.
     -v
         List bookmarked repository names with their URL.
 
-    -add <repository_name> <repository_url>
+    add <repository_name> <repository_url>
         Adds a new remote connection to a remote repository.
 
     rm <repository_name>
