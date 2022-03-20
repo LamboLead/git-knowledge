@@ -14,7 +14,7 @@ It also merges multiple commits into one history if arguments are commits.
         $ git pull ...
 
     3. Merge the branches
-        $ git merge <merged_branch_name>
+        $ git merge <branch_to_merge>
 
 --- MERGING TYPES
 

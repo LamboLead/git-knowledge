@@ -5,11 +5,11 @@ It is a safer operation than 'git reset' because it doesn't delete commits.
 
 --- OPTIONS
     
-    -e
+    -e <commit>
         Default. Opens the text editor and prompts you to edit the commit message before committing the revert.
 
-    --no-edit
+    --no-edit <commit>
         It doesn't open the text editor.
 
-    -n
+    -n <commit>
         Adds the inverse modifications to the staging area and working directory instead of creating a new commit with the reversed history.

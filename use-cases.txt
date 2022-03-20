@@ -1,0 +1,23 @@
+*  Modify the previous commit
+    If you want to modify the message or the files of the previous commit, use:
+      $ git commit --amend
+
+    - Change the last commit's message
+      
+      If you don't want to open the code editor, run:
+
+        $ git commit --amend -m "Your new message"
+
+      This changes the last commit's message with the new one.
+
+    - Modify the last commit's files
+
+      First, you need to add all the changes that you want to insert to the previous commit into the staging area.
+      Then, run:
+
+        $git commit --amend --no-edit
+
+      This will change the files of the last commit, adding the new file, and leaving the message untouched.
+
+    If you want to modify a commit further down the commit history, use:
+      $git rebase ...
