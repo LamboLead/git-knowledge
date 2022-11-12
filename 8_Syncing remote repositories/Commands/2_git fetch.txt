@@ -28,7 +28,7 @@ This command does not have any effect on the local work, and it should be checke
     These are the steps for fetching a remote branch and update the local working directory to the remote content.
 
     1. Configure the remote repository
-        $ git remot test_repo git@hostname:test/test_repo.git
+        $ git remote test_repo git@hostname:test/test_repo.git
 
     2. Download the content of 'feature_branch' from the remote repository and integrate it into the local repository.
         $ git fetch test_repo feature_branch

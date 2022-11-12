@@ -13,7 +13,7 @@ Designed to create, view and remmove connections to other repositories.
     add <connection_name> <repository_url>
         Adds a new remote connection to a remote repository.
 
-    rm <repository_name>
+    rm <connection_name>
         Removes the connection to the remote repository.
 
     rename <repository_old_name> <repository_new_name>
